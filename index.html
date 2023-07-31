@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot the Target Game - 2023</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!--Author Volkan Aydogdu, 000908933-->
+</head>
+
+<body>
+    <header>
+        <h1>Shoot the Target Game</h1>
+    </header>
+    <main>
+
+        <div class="bilgi-kutucugu" id="bilgi-kutucugu">
+            <span class="soru-isareti"><i class="fas fa-question-circle"></i></span>
+            <h2>How to Play</h2>
+            <ul>
+                <li>Objective: The objective of the game is to shoot down as many balloons as possible to earn points. The game will get progressively harder as you advance through the levels.</li>
+                <li>Starting the Game: Click on the "Start" button to begin the game.</li>
+                <li>Gameplay: Balloons will start appearing from the top of the screen. Click on them to shoot them down. Each shot balloon earns you 10 points.</li>
+                <li>Scoring: Your current score will be displayed on the top-right corner of the game area. The "Score" will increase every time you successfully shoot a balloon.</li>
+                <li>Levels: As you earn more points, you will progress through different levels. Each level has a different target score to reach.</li>
+                <li>Level Up: When your score reaches the target score for the current level, you will level up. The game will become faster and more challenging with each level.</li>
+                <li>Exiting the Game: Click the "Exit" button to close the game.</li>
+                <li>Restarting the Game: press the "F5" key on your keyboard to reset the game if needed.</li>
+            </ul>
+        </div>
+    
+        <button id="toggle-button"><i class="fas fa-question-circle"></i></button>
+        
+        <div id="background-color-changer">
+            <label for="bg-color-picker">
+                <i class="fas fa-pencil-alt"></i> Change BG:
+            </label>
+            <input type="color" id="bg-color-picker" value="#f0f3f5">
+        </div>
+
+
+        <div id="button-container">
+            <button id="start-button">Start</button>
+            <button id="exit-button">Exit</button>
+        </div>
+        <svg id="game-container" width="100%" height="400">
+            <line id="target-line" x1="0" y1="380" x2="100%" y2="380" style="stroke:black;stroke-width:4" />
+        </svg>
+
+        <div id="scoreboard">
+            Score: <span id="score">0</span>
+            <span id="level">Level 1</span>
+        </div>
+
+
+        <div id="game-over-box">
+            <div id="game-over">Game Over</div>
+            <div id="reset-note">Press F5 to Reset</div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Volkan Aydogdu</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
